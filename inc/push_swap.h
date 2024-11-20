@@ -6,7 +6,7 @@
 /*   By: kotkobay <kotkobay@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 20:29:38 by kotkobay          #+#    #+#             */
-/*   Updated: 2024/11/20 10:55:10 by kotkobay         ###   ########.fr       */
+/*   Updated: 2024/11/20 11:00:11 by kotkobay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,6 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
-
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 1000
-# endif
 
 typedef struct s_stacks
 {
