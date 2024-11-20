@@ -6,14 +6,13 @@
 /*   By: kotkobay <kotkobay@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 20:29:38 by kotkobay          #+#    #+#             */
-/*   Updated: 2024/10/12 12:49:18 by kotkobay         ###   ########.fr       */
+/*   Updated: 2024/11/20 10:55:10 by kotkobay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "../gnl/get_next_line.h"
 # include "../libft/libft.h"
 # include <stdio.h>
 # include <stdlib.h>
