@@ -6,7 +6,7 @@
 /*   By: kotkobay <kotkobay@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 20:28:44 by kotkobay          #+#    #+#             */
-/*   Updated: 2023/12/13 20:28:45 by kotkobay         ###   ########.fr       */
+/*   Updated: 2024/11/20 11:08:58 by kotkobay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	sort_three_elements(t_stacks *s)
 		swap("sa", s->a, s->a_size);
 }
 
-void	sort_four_to_five_elements(t_stacks *s)
+void	sort_four_or_five_elements(t_stacks *s)
 {
 	while (s->b_size <= 1)
 	{

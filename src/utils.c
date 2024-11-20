@@ -6,13 +6,13 @@
 /*   By: kotkobay <kotkobay@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 20:28:51 by kotkobay          #+#    #+#             */
-/*   Updated: 2024/10/09 18:34:12 by kotkobay         ###   ########.fr       */
+/*   Updated: 2024/11/20 11:08:40 by kotkobay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
-void	sort_is_duplicated(t_stacks *s, int i)
+void	check_duplicates(t_stacks *s, int i)
 {
 	int	j;
 
@@ -75,7 +75,7 @@ void	initialize_stacks(int argc, char **argv, t_stacks *s)
 		free_with_message(s, "Error\n");
 }
 
-void	create_index(t_stacks *s)
+void	create_indices(t_stacks *s)
 {
 	int	i;
 	int	j;

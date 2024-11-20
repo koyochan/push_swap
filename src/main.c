@@ -6,13 +6,13 @@
 /*   By: kotkobay <kotkobay@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 20:28:21 by kotkobay          #+#    #+#             */
-/*   Updated: 2024/10/16 11:01:46 by kotkobay         ###   ########.fr       */
+/*   Updated: 2024/11/20 11:05:38 by kotkobay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
-static void	validate_single_arg(char *arg)
+static void	validate_single_argument(char *arg)
 {
 	int	i;
 
@@ -28,7 +28,7 @@ static void	validate_single_arg(char *arg)
 	}
 }
 
-static void	validate_multiple_args(int argc, char **argv)
+static void	validate_multiple_arguments(int argc, char **argv)
 {
 	int	i;
 	int	j;
@@ -51,15 +51,15 @@ static void	validate_multiple_args(int argc, char **argv)
 	}
 }
 
-void	validate_arguments(int argc, char **argv)
+void	validate_all_arguments(int argc, char **argv)
 {
 	if (argc == 2)
-		validate_single_arg(argv[1]);
+		validate_single_argument(argv[1]);
 	else
-		validate_multiple_args(argc, argv);
+		validate_multiple_arguments(argc, argv);
 }
 
-void	join_args(int argc, char **argv, t_stacks *s)
+void	merge_arguments(int argc, char **argv, t_stacks *s)
 {
 	char	*tmp;
 	char	*tmp2;
@@ -96,19 +96,19 @@ int	main(int argc, char **argv)
 		exit(1);
 	}
 	else
-		s = initialize_stack_and_args(argc, argv);
+		s = initialize_stack_and_arguments(argc, argv);
 	parse_numbers(s);
-	sort_is_duplicated(s, 0);
-	create_index(s);
+	check_duplicates(s, 0);
+	create_indices(s);
 	if (s->a_size == 2 && s->a[0] > s->a[1])
 		swap("sa", s->a, s->a_size);
 	else if (s->a_size == 3)
 		sort_three_elements(s);
 	else if (s->a_size >= 4 && s->a_size <= 5)
-		sort_four_to_five_elements(s);
+		sort_four_or_five_elements(s);
 	else
 		radix_sort(s);
-	sort_is_duplicated(s, 1);
+	check_duplicates(s, 1);
 	free_with_message(s, "Error\n");
 	return (0);
 }
