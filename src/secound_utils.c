@@ -6,7 +6,7 @@
 /*   By: kotkobay <kotkobay@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 13:58:14 by kotkobay          #+#    #+#             */
-/*   Updated: 2024/10/12 12:49:02 by kotkobay         ###   ########.fr       */
+/*   Updated: 2024/11/20 11:11:04 by kotkobay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,16 @@ void	free_and_exit(char *str)
 	exit(1);
 }
 
-t_stacks	*initialize_stack_and_args(int argc, char **argv)
+t_stacks	*initialize_stack_and_arguments(int argc, char **argv)
 {
 	t_stacks	*s;
 
-	validate_arguments(argc, argv);
+	validate_all_arguments(argc, argv);
 	s = malloc(sizeof(*s));
 	if (!s)
 		exit(1);
 	initialize_stacks(argc, argv, s);
-	join_args(argc, argv, s);
+	merge_arguments(argc, argv, s);
 	return (s);
 }
 
