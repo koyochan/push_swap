@@ -6,7 +6,7 @@
 /*   By: kotkobay <kotkobay@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 20:28:21 by kotkobay          #+#    #+#             */
-/*   Updated: 2024/11/20 11:05:38 by kotkobay         ###   ########.fr       */
+/*   Updated: 2024/12/01 19:11:48 by kotkobay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ static void	validate_single_argument(char *arg)
 {
 	int	i;
 
+	if (!arg || ft_strlen(arg) == 0)
+		free_with_message(NULL, "Error\n");
 	i = 0;
 	while (arg[i])
 	{
